@@ -4,9 +4,13 @@ const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const connectDB = require('./config/db')
 
 // load the environment variables
-dotenv.config({ path: './config/config.env' })
+dotenv.config({ path: './config/config.env' });
+
+// connect to database
+connectDB();
 
 const app = express();
 
