@@ -10,6 +10,10 @@ const StoreSchema = new mongoose.Schema({
         trim: true,
         maxlength: [10, 'Store ID must be less than 10 characters']
     },
+    address: {
+        type: String,
+        required: [true, 'please add a valid address']
+    },
     location: {
         type: {
           type: String, 
